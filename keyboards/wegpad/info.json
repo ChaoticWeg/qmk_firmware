@@ -19,8 +19,8 @@
     },
 
     "matrix_pins": {
-        "cols": ["C2", "C2", "C2", "C2", "C2"],
-        "rows": ["D1", "D1", "D1", "D1", "D1"]
+        "cols": ["A6",  "B0",  "B1",  "B2", "A1"],
+        "rows": ["B10", "B14", "B13", "A5", "A4"]
     },
 
     "usb": {
@@ -28,6 +28,7 @@
         "pid": "0x0423",
         "vid": "0xFEED"
     },
+
     "layouts": {
         "LAYOUT_ortho_5x5": {
             "layout": [
