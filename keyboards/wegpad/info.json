@@ -15,12 +15,20 @@
         "console": true,
         "extrakey": true,
         "mousekey": false,
-        "nkro": false
+        "nkro": false,
+        "encoder": true
     },
 
     "matrix_pins": {
         "cols": ["A6",  "B0",  "B1",  "B2", "A1"],
         "rows": ["B10", "B14", "B13", "A5", "A4"]
+    },
+
+    "encoder": {
+        "enabled": true,
+        "rotary": [
+            {"pin_a": "A2", "pin_b": "A3"}
+        ]
     },
 
     "usb": {
