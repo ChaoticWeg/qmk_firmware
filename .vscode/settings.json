@@ -28,5 +28,6 @@
     "[json]": {
 	    "editor.formatOnSave": false
     },
-    "terminal.integrated.defaultProfile.windows": "QMK_MSYS"
+    "terminal.integrated.defaultProfile.windows": "QMK_MSYS",
+    "git.detectSubmodules": false
 }
