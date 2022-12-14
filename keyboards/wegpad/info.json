@@ -9,6 +9,12 @@
     "bootloader": "tinyuf2",
     "diode_direction": "COL2ROW",
 
+    "usb": {
+        "device_version": "1.0.0",
+        "pid": "0x0423",
+        "vid": "0xFEED"
+    },
+
     "features": {
         "bootmagic": true,
         "command": false,
@@ -29,12 +35,6 @@
         "rotary": [
             {"pin_a": "A2", "pin_b": "A3"}
         ]
-    },
-
-    "usb": {
-        "device_version": "1.0.0",
-        "pid": "0x0423",
-        "vid": "0xFEED"
     },
 
     "layouts": {
