@@ -3,7 +3,7 @@
 #include "print.h"
 
 void keyboard_post_init_user(void) {
-    #if defined(WEG_DEBUG) && defined(CONSOLE_ENABLE)
+    #ifdef CONSOLE_ENABLE
         debug_enable = true;
     #endif
 }
@@ -34,7 +34,7 @@ const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
 #endif
 
 bool process_record_user(uint16_t keycode, keyrecord_t *record) {
-    #ifdef WEG_DEBUG
+    #ifdef CONSOLE_ENABLE
         if (record->event.pressed) {
             // Only print on key-up
             uprintf(
