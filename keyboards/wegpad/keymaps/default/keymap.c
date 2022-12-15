@@ -10,17 +10,17 @@ void keyboard_post_init_user(void) {
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
     [WEG_LAYER_BASE] = LAYOUT_ortho_5x5(
-        KC_A,    KC_B,    KC_C,    KC_D,    MO(WEG_LAYER_RGB),
-        KC_F,    KC_G,    KC_H,    KC_I,    KC_NO,
-        KC_K,    KC_L,    KC_M,    KC_NO,   KC_MPLY,
-        KC_P,    KC_Q,    KC_R,    KC_NO,   KC_NO,
-        KC_U,    KC_V,    KC_W,    KC_NO,   KC_NO
+        KC_NUM,  KC_F13,  KC_F14,  KC_HOME, MO(WEG_LAYER_RGB),
+        KC_P7,   KC_P8,   KC_P9,   KC_END,  KC_NO,
+        KC_P4,   KC_P5,   KC_P6,   KC_NO,   KC_MPLY,
+        KC_P1,   KC_P2,   KC_P3,   KC_NO,   KC_NO,
+        KC_P0,   KC_P0,   KC_PDOT, KC_NO,   KC_NO
     ),
 
     [WEG_LAYER_RGB] = LAYOUT_ortho_5x5(
         QK_BOOT, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_NO,   BL_TOGG,
+        KC_TRNS, KC_TRNS, KC_TRNS, KC_NO,   RGB_TOG,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_NO,   KC_NO,
         KC_TRNS, KC_TRNS, KC_TRNS, KC_NO,   KC_NO
     )

@@ -1,5 +1,5 @@
 # REQUIRED for STM32F401 to work at all
-# Will be deprecated once embedded_flash support is complete
+# Will be deprecated once embedded_flash support is complete per docs (as of 14 Dec 2022)
 WEAR_LEVELING_DRIVER = legacy
 
 # RGB
