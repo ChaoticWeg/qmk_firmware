@@ -2,7 +2,7 @@
 
 // Colors courtesy of Nord <https://www.nordtheme.com>
 // ALL COLORS ARE IN HSV TO SUPPORT RGB_VAI/VAD ON ENCODER LAYER 1
-#define WEG_COLOR_BLACK         155, 71, 63
+#define WEG_COLOR_BLACK         155, 71, 10
 #define WEG_COLOR_WHITE         155, 17, 232
 #define WEG_COLOR_LIGHT_BLUE    148, 84, 193
 #define WEG_COLOR_DARK_BLUE     150, 114, 170
