@@ -2,6 +2,17 @@
 #include "weg_keymap.h"
 #include "print.h"
 
+#ifndef ______
+#   define _______ KC_TRNS
+#endif
+
+#ifndef XXXXXXX
+#   define XXXXXXX KC_NO
+#endif
+
+#define CW_LEFT C(G(KC_LEFT))
+#define CW_RGHT C(G(KC_RGHT))
+
 void keyboard_post_init_user(void) {
     #ifdef CONSOLE_ENABLE
         debug_enable = true;
@@ -9,27 +20,36 @@ void keyboard_post_init_user(void) {
 }
 
 const uint16_t PROGMEM keymaps[][MATRIX_ROWS][MATRIX_COLS] = {
-    [WEG_LAYER_BASE] = LAYOUT_ortho_5x5(
-        KC_NUM,  KC_F13,  KC_F14,  KC_HOME, MO(WEG_LAYER_RGB),
-        KC_P7,   KC_P8,   KC_P9,   KC_END,  KC_NO,
-        KC_P4,   KC_P5,   KC_P6,   KC_NO,   KC_MPLY,
-        KC_P1,   KC_P2,   KC_P3,   KC_NO,   KC_NO,
-        KC_P0,   KC_P0,   KC_PDOT, KC_NO,   KC_NO
+    [_BASE] = LAYOUT_ortho_5x5(
+        KC_NUM,  KC_F13,  KC_F14,  KC_HOME, MO(_RGB),
+        KC_P7,   KC_P8,   KC_P9,   KC_END,  MO(_WIN),
+        KC_P4,   KC_P5,   KC_P6,   XXXXXXX, KC_MPLY,
+        KC_P1,   KC_P2,   KC_P3,   XXXXXXX, XXXXXXX,
+        KC_P0,   KC_P0,   KC_PDOT, XXXXXXX, XXXXXXX
     ),
 
-    [WEG_LAYER_RGB] = LAYOUT_ortho_5x5(
-        QK_BOOT, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS, KC_TRNS,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_NO,   RGB_TOG,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_NO,   KC_NO,
-        KC_TRNS, KC_TRNS, KC_TRNS, KC_NO,   KC_NO
+    [_RGB] = LAYOUT_ortho_5x5(
+        QK_BOOT, _______, _______, _______, XXXXXXX,
+        _______, _______, _______, _______, _______,
+        _______, _______, _______, XXXXXXX, RGB_TOG,
+        _______, _______, _______, XXXXXXX, XXXXXXX,
+        _______, _______, _______, XXXXXXX, XXXXXXX
+    ),
+
+    [_WIN] = LAYOUT_ortho_5x5(
+        _______, _______, _______, _______, _______,
+        _______, _______, _______, _______, XXXXXXX,
+        CW_LEFT, _______, CW_RGHT, XXXXXXX, _______,
+        _______, _______, _______, XXXXXXX, XXXXXXX,
+        _______, _______, _______, XXXXXXX, XXXXXXX
     )
 };
 
 #if defined(ENCODER_MAP_ENABLE)
     const uint16_t PROGMEM encoder_map[][NUM_ENCODERS][2] = {
-        [0] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
-        [1] = { ENCODER_CCW_CW(RGB_VAD, RGB_VAI) }
+        [_BASE] = { ENCODER_CCW_CW(KC_VOLD, KC_VOLU) },
+        [_RGB]  = { ENCODER_CCW_CW(RGB_VAD, RGB_VAI) },
+        [_WIN]  = { ENCODER_CCW_CW(XXXXXXX, XXXXXXX) }
     };
 #endif
 

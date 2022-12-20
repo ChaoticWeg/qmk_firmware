@@ -1,6 +1,8 @@
 #pragma once
 
 enum {
-    WEG_LAYER_BASE,
-    WEG_LAYER_RGB
+    _BASE,
+    _RGB,
+    _WIN,
+    _LMAX
 };

@@ -6,8 +6,9 @@ static uint8_t max_v;
 
 static HSV underglow_hsv = (HSV) { WEG_LAYER_COLOR_UNDERGLOW };
 static HSV colors_per_layer[] = {
-    [WEG_LAYER_BASE] = (HSV) { WEG_LAYER_COLOR_BASE },
-    [WEG_LAYER_RGB] = (HSV) { WEG_LAYER_COLOR_RGB }
+    [_BASE] = (HSV) { WEG_LAYER_COLOR_BASE },
+    [_RGB] = (HSV) { WEG_LAYER_COLOR_RGB },
+    [_WIN] = (HSV) { WEG_LAYER_COLOR_WIN }
 };
 
 static void clamp_hsv_val(HSV *hsv) {
