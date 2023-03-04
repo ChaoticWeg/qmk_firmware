@@ -1,0 +1,7 @@
+#define ENCODER_RESOLUTIONS       { 2 }
+#define ENCODER_RESOLUTIONS_RIGHT { 8 }
+
+#define LED_CAPS_LOCK_PIN  24
+#define LED_PIN_ON_STATE    0
+
+#define IGNORE_MOD_TAP_INTERRUPT
