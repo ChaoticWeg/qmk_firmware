@@ -5,8 +5,9 @@ typedef struct { uint8_t h, s; } weg_hs_t;
 
 static weg_hs_t current_hs;
 static weg_hs_t hs_per_layer[] = {
-    [0] = { WEG_PAPAYA_HS },
-    [1] = { WEG_PURPLE_HS }
+    [0] = { WEG_BLUE_HS },
+    [1] = { WEG_PAPAYA_HS },
+    [2] = { WEG_PURPLE_HS }
 };
 
 /** Copies the hue and saturation value from the static array to the weg_hs_t at the address provided */
