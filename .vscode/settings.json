@@ -29,5 +29,6 @@
 	    "editor.formatOnSave": false
     },
     "terminal.integrated.defaultProfile.windows": "QMK_MSYS",
-    "git.detectSubmodules": false
+    "git.detectSubmodules": false,
+    "C_Cpp.errorSquiggles": "disabled"
 }
